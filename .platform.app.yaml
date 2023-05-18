@@ -1,2 +1,34 @@
 name: 'idea'
+
 type: 'php:8.2'
+
+dependencies:
+    php:
+        composer/composer: "^2"
+
+runtime:
+    extensions:
+        - apcu
+        - blackfire
+        - ctype
+        - iconv
+        - mbstring
+        - pdo_pgsql
+        - sodium
+        - xsl
+        
+
+variables:
+    php:
+        opcache.preload: config/preload.php
+build:
+    flavor: none
+
+disk: 1024
+
+web:
+    locations:
+        "/":
+            root: "public"
+            expires: 1h
+            passthru: "/index.php"
