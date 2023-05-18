@@ -1,4 +1,4 @@
-name: 'idea'
+name: 'app'
 
 type: 'php:8.2'
 
