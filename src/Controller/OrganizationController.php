@@ -14,6 +14,7 @@ class OrganizationController extends AbstractController
         return $this->json([
             'message' => 'Welcome to your new controller!',
             'path' => 'src/Controller/OrganizationController.php',
+            "valy" => 'BONJOUR VALY'
         ]);
     }
 }
